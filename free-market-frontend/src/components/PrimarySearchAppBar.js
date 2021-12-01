@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
+import '../App.css';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import Logo from './logo.png';
-
+import Logo from '../logo.png';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -21,7 +21,7 @@ const Search = styled('div')(({ theme }) => ({
   marginLeft: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(5),
     width: 'auto',
   },
 }));
@@ -53,8 +53,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function PrimarySearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="static" >
+        <Toolbar className="cabecalho">
           <Box
             component="img"
             sx={{
@@ -64,6 +64,9 @@ export default function PrimarySearchAppBar() {
             src={Logo}
           />
           <Typography
+            fontSize="30px"
+            font-family="Georgia, Times, serif"
+            marginLeft="15px"
             variant="h6"
             noWrap
             component="div"
@@ -76,14 +79,14 @@ export default function PrimarySearchAppBar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Busque por um produto ou categoria"
+              placeholder="Buscar um produto..."
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+
+          
         </Toolbar>
       </AppBar>
-      
-      
     </Box>
   );
 }
