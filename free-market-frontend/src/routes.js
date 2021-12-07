@@ -1,18 +1,23 @@
-import React from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import Login from "./login";
-import Produtos from "./Produtos";
+import Produtos from "./produtos";
 import Cadastro from "./cadastro";
+import { getToken, removeUserSession, setUserSession } from "./Utils/Commons";
+import axios from "axios";
 
 const Rotas = () => {
+
     return (
         <BrowserRouter>
-            <Routes>
-                <Route exact path="/" element={<Login />} />
-                <Route path="/cadastro" element={<Cadastro />} />
-                <Route path="/produtos" element={<Produtos />} />
-            </Routes>
+            <Fragment>
+                <Routes>
+                    <Route exact path="/" element={<Login />} />
+                    <Route path="/cadastro" element={<Cadastro />} />
+                    <Route path="/produtos" element={<Produtos />} />
+                </Routes>
+            </Fragment>
         </BrowserRouter>
     )
 }
