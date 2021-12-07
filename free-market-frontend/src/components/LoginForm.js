@@ -23,7 +23,6 @@ export default function LoginForm() {
             setUserSession(response.data.token, response.data.id);
             window.location.href="http://localhost:3000/produtos"
         }).catch(error => {
-            console.log(error);
             if (error.response.status === 401) {
                 alert("Usuário e/ou senha inválidos.");
             } else {
