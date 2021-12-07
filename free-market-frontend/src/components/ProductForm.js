@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from '../produtos.module.css';
 import axios from 'axios'
+import { getUserId } from '../Utils/Commons';
 
 export default function ProductForm() {
 
@@ -47,8 +48,8 @@ export default function ProductForm() {
         const data= {
             nome: productName,
             descricao: productDescription,
-            categoriaId: "68e005cc-56fa-11ec-b1e9-0242ac110006",
-            clienteId: "57b8989e-457f-4f61-bff7-dafe96d49653",
+            nomeCategoria: productCategory,
+            clienteId: getUserId(),
             valor: productPrice,
             estado: productState
         };
