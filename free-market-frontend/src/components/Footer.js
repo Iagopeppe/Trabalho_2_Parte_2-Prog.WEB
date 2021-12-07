@@ -1,10 +1,10 @@
 import * as React from 'react';
-import '../App.css';
+import styles from '../produtos.module.css';
 
 export default function Footer() {
     return (
         <div>
-            <p class="footer">Gabriel Kresin, Iago Giuseppe Tambosi e Johnny Andréas Schweder</p>
+            <p className={styles.footer}>Gabriel Kresin, Iago Giuseppe Tambosi e Johnny Andréas Schweder</p>
         </div>
     );
 }

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import '../App.css';
+import styles from '../produtos.module.css';
 
 export default function ProductForm() {
     return (
-        <form className="element_container">
-            <p className="element_title"><strong>Anunciar produto</strong></p>
+        <form className={styles.element_container}>
+            <p className={styles.element_title}><strong>Anunciar produto</strong></p>
             <div>
                 <input id="product_name" type="text" placeholder="Nome do produto" />
             </div>
@@ -19,25 +19,25 @@ export default function ProductForm() {
             </div>
             <div>
                 <text>Estado do produto: </text>
-                <label className="container">Usado
+                <label className={styles.container}>Usado
                     <input type="radio" name="estado_produto" id="product_state_used" />
-                    <span className="radio"></span>
+                    <span className={styles.radio}></span>
                 </label>
-                <label className="container">Seminovo
+                <label className={styles.container}>Seminovo
                     <input type="radio" name="estado_produto" id="product_state_almost_new" />
-                    <span className="radio"></span>
+                    <span className={styles.radio}></span>
                 </label>
-                <label className="container">Novo
+                <label className={styles.container}>Novo
                     <input type="radio" name="estado_produto" id="product_state_new" />
-                    <span className="radio"></span>
+                    <span className={styles.radio}></span>
                 </label>
             </div>
-            <div className="left_aligned">
-                <button type="button" className="button_right">Adicionar imagem</button>
+            <div className={styles.left_aligned}>
+                <button type="button" className={styles.button_right}>Adicionar imagem</button>
             </div>
-            <div className="right_aligned">
-                <button type="reset" className="clear_button">Limpar</button>
-                <button type="button" onclick="create()">Confirmar</button>
+            <div className={styles.right_aligned}>
+                <button type="reset" className={styles.clear_button}>Limpar</button>
+                <button className={styles.form_button} type="button" onclick="create()">Confirmar</button>
             </div>
         </form>
     );

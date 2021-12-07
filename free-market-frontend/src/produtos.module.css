@@ -50,7 +50,7 @@ Obs.: Reciclado da atividade anterior
   border-right:2px solid rgb(185, 185, 185);
 }
 
-.sidenav a, .dropdown-btn {
+.sidenav a, .dropdown_btn {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
@@ -71,20 +71,20 @@ Obs.: Reciclado da atividade anterior
   background-color: #d4d4d4;
 }
 
-.dropdown-container {
+.dropdown_container {
   display: none;
   background-color: #EEEEEE;
   padding-left: 8px;
 }
 
-.dropdown-subitem {
+.dropdown_subitem {
   font-size: 16px !important;
   right: 30% !important;
   color: black !important;
   border-bottom: 0px solid grey !important;
 }
 										 
-.fa-caret-down {
+.fa_caret_down {
   float: right;
   padding-right: 8px;
 }

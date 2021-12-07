@@ -1,12 +1,12 @@
 import * as React from 'react';
-import '../App.css';
+import styles from '../produtos.module.css';
 
 export default function ProductList() {
     return (
         <div>
             <table>
                 <tr>
-                    <th className="table_filter_container"><img src="../assets/icons/filter_icon.png" className="table_filter_icon" /></th>
+                    <th className={styles.table_filter_container}><img src="../assets/icons/filter_icon.png" className={styles.table_filter_icon} /></th>
                 </tr>
                 <tr id="title_row">
                     <th>Nome do produto</th>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../App.css';
+import  '../produtos.module.css';
 
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var subitem = document.getElementsByClassName("dropdown-subitem");

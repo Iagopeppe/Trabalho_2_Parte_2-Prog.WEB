@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
-import '../App.css';
+import styles from '../produtos.module.css';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -54,11 +54,11 @@ export default function PrimarySearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" >
-        <Toolbar className="cabecalho">
+        <Toolbar className={styles.cabecalho}>
           <Box
             component="img"
             sx={{
-            height: 64,
+              height: 64,
             }}
             alt="Your logo."
             src={Logo}
@@ -84,7 +84,6 @@ export default function PrimarySearchAppBar() {
             />
           </Search>
 
-          
         </Toolbar>
       </AppBar>
     </Box>
