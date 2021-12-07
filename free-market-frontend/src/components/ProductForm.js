@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from '../produtos.module.css';
-
+import axios from 'axios'
 
 export default function ProductForm() {
 
@@ -43,9 +43,18 @@ export default function ProductForm() {
           return;
         }
       
+        const url = `http://localhost:8080/api/produto/new`
+        const data= {
+            nome: productName,
+            descricao: productDescription,
+            categoriaId: "68e005cc-56fa-11ec-b1e9-0242ac110006",
+            clienteId: "57b8989e-457f-4f61-bff7-dafe96d49653",
+            valor: productPrice,
+            estado: productState
+        };
+        axios.post(url, data)
+        
         alert("Parabéns!\nSeu produto foi anunciado com sucesso!");
-
-        //INSERIR AQUI O POST PARA A API UTILIZANDO AS VARIÁVEIS DE STATE
     }
 
 
