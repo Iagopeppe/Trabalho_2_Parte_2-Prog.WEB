@@ -10,15 +10,23 @@ import styles from './produtos.module.css';
 
 function Produtos() {
   return (
-    <body className={styles.main}>
+    <body>
+    <div>
       <PrimarySearchAppBar></PrimarySearchAppBar>
       <SideNav></SideNav>
-      <ProductForm></ProductForm>
-      <ProductList></ProductList>
-      <PopularProducts></PopularProducts>
+      <div className={styles.main}>
+        <br />
+        <ProductForm></ProductForm>
+        <br />
+        <ProductList></ProductList>
+        <br />
+        <PopularProducts></PopularProducts>
+        <br />
+      </div>
       <Footer></Footer>
+    </div>
     </body>
   );
 }
 
-export default Produtos;
+export default withStyles(styles)(Produtos);

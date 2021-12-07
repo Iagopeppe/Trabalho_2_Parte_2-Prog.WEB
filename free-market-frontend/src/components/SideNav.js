@@ -1,11 +1,13 @@
+import { StylesContext } from '@mui/styles';
+import { style } from '@mui/system';
 import * as React from 'react';
-import  '../produtos.module.css';
+import  styles from '../produtos.module.css';
 
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var subitem = document.getElementsByClassName("dropdown-subitem");
+var dropdown = document.getElementsByClassName("dropdown_btn");
+var subitem = document.getElementsByClassName("dropdown_subitem");
 
 for (var i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function () {
+  dropdown[i].addEventListener("onClick", function () {
     this.classList.toggle("active");
     var dropdownContent = this.nextElementSibling;
     if (dropdownContent.style.display === "block") {
@@ -18,43 +20,43 @@ for (var i = 0; i < dropdown.length; i++) {
 
 export default function SideNav() {
     return (
-        <div className="sidenav">
-        <button className="dropdown-btn">Cozinha
-            <i className="fa fa-caret-down"></i>
+        <div className={styles.sidenav}>
+        <button className={styles.dropdown_btn}>Cozinha
+            <i className={styles.fa_caret_down}></i>
         </button>
-        <div className="dropdown-container">
-            <a className="dropdown-subitem" href="#">Geladeiras</a>
-            <a className="dropdown-subitem" href="#">Fogões</a>
+        <div className={styles.dropdown_container}>
+            <a className={styles.dropdown_subitem} href="#">Geladeiras</a>
+            <a className={styles.dropdown_subitem} href="#">Fogões</a>
         </div>
-        <button className="dropdown-btn">Livros
-            <i className="fa fa-caret-down"></i>
+        <button className={styles.dropdown_btn}>Livros
+            <i className={styles.fa_caret_down}></i>
         </button>
-        <div className="dropdown-container">
-            <a className="dropdown-subitem" href="#">Educacionais</a>
-            <a className="dropdown-subitem" href="#">Infantis</a>
+        <div className={styles.dropdown_container}>
+            <a className={styles.dropdown_subitem} href="#">Educacionais</a>
+            <a className={styles.dropdown_subitem} href="#">Infantis</a>
         </div>
-        <button className="dropdown-btn">Eletrônicos
-            <i className="fa fa-caret-down"></i>
+        <button className={styles.dropdown_btn}>Eletrônicos
+            <i className={styles.fa_caret_down}></i>
         </button>
-        <div className="dropdown-container">
-            <a className="dropdown-subitem" href="#">Televisões</a>
-            <a className="dropdown-subitem" href="#">Celulares</a>
-            <a className="dropdown-subitem" href="#">Computadores</a>
+        <div className={styles.dropdown_container}>
+            <a className={styles.dropdown_subitem} href="#">Televisões</a>
+            <a className={styles.dropdown_subitem} href="#">Celulares</a>
+            <a className={styles.dropdown_subitem} href="#">Computadores</a>
         </div>
-        <button className="dropdown-btn">Alimentos
-            <i className="fa fa-caret-down"></i>
+        <button className={styles.dropdown_btn}>Alimentos
+            <i className={styles.fa_caret_down}></i>
         </button>
-        <div className="dropdown-container">
-            <a className="dropdown-subitem" href="#">Cereais</a>
-            <a className="dropdown-subitem" href="#">Bebidas</a>
-            <a className="dropdown-subitem" href="#">Enlatados</a>
+        <div className={styles.dropdown_container}>
+            <a className={styles.dropdown_subitem} href="#">Cereais</a>
+            <a className={styles.dropdown_subitem} href="#">Bebidas</a>
+            <a className={styles.dropdown_subitem} href="#">Enlatados</a>
         </div>
-        <button className="dropdown-btn">Veículos
-            <i className="fa fa-caret-down"></i>
+        <button className={styles.dropdown_btn}>Veículos
+            <i className={styles.fa_caret_down}></i>
         </button>
-        <div className="dropdown-container">
-            <a className="dropdown-subitem" href="#">Carros</a>
-            <a className="dropdown-subitem" href="#">Motos</a>
+        <div className={styles.dropdown_container}>
+            <a className={styles.dropdown_subitem} href="#">Carros</a>
+            <a className={styles.dropdown_subitem} href="#">Motos</a>
         </div>
     </div>
     );
