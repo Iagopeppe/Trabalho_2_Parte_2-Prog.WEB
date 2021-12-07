@@ -1,4 +1,4 @@
-body {
+.cadastroBody {
     background-color: #eeeeee;
     color: #808080;
     font-family: Arial, Helvetica, sans-serif;
@@ -34,7 +34,7 @@ input[type="date"] {
     color: #808080;
 }
 
-button {
+.cadastroButton {
     background-color: #e0e0e0;
     border: none;
     color: black;

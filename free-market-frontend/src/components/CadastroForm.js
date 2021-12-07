@@ -106,7 +106,7 @@ export default function CadastroForm() {
                 </div>
                 <div>
                     <button className={styles.clean} type="reset">LIMPAR</button>
-                    <button type="button" onClick={() => create()}>CONFIRMAR</button>
+                    <button className={styles.cadastroButton} type="button" onClick={() => create()}>CONFIRMAR</button>
                 </div>
             </form>
         </>

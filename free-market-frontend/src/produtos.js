@@ -10,7 +10,7 @@ import styles from './produtos.module.css';
 
 function Produtos() {
   return (
-    <body>
+    <body className={styles.produtosBody}>
     <div>
       <PrimarySearchAppBar></PrimarySearchAppBar>
       <SideNav></SideNav>
